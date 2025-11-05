@@ -1,15 +1,1 @@
-{
-  "Name":"[TH]Show Law Stats V2",
-  "DisplayName":"[TH]Show Law Stats V2",
-  "GameVersion":1.24,
-  "Version":1.0,
-  "Desc":"แสดงสถิติกฎของกฎไทอี้พื้นฐานทั้ง 5 ข้อพร้อมกัน\n- แสดงสถิติกฎของศิษย์ทั้งหมดในการสร้างตัวละคร\n- แสดงสถิติกฎอย่างต่อเนื่องขณะสุ่มศิษย์",
-  "Author":"JKL51(Creator) & Tz_TonZa(Modify)",
-  "UIPackage":null,
-  "Flag":-1677391242,
-  "Tags":["Function","Usability","Integrated","ExcludeRealmsHeaven","Non-Chinese"],
-  "IncreasedDesc":"",
-  "IsInsideCreat":false,
-  "Previews":[],
-  "ParentModInfo":null
-}
+{"Name":"ShowLawStatsV2","DisplayName":"Show Law Stats V2","GameVersion":1.24,"Version":1.1,"Desc":"แสดงสถิติกฎของกฎไทยี่พื้นฐานทั้ง 5 ข้อพร้อมกัน\n- แสดงสถิติกฎของศิษย์ทั้งหมดในการสร้างตัวละคร\n- แสดงสถิติกฎอย่างต่อเนื่องขณะสุ่มศิษย์","Author":"JKL51(Creator) & Tz_TonZa(Modify)","UIPackage":null,"ID":"2893347858","Flag":-1677391242,"Tags":["Function","Usability","Integrated","ExcludeRealmsHeaven","Non-Chinese"],"IncreasedDesc":"","IsInsideCreat":false,"Previews":[],"ParentModInfo":null}
