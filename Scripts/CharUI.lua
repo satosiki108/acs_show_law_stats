@@ -59,7 +59,7 @@ end
 function CharUI:RefreshLaw()
     --local lawMatch = CS.XiaWorld.NpcPractice.GetFiveBaseEfficiency(self.SelectedGong, self.NPCManager.npcs[0]) --Want dynamic index -JKL51
 	local lawMatch = CS.XiaWorld.NpcPractice.GetFiveBaseEfficiency(self.SelectedGong, self.NPCManager.npcs[self.NPCSelector.selectedIndex])
-    local format = XT("匹配程度：{0:P0}"):gsub("{0:P0}","%%.f %%%%")
+    local format = XT("ความเข้ากันได้：{0:P0}"):gsub("{0:P0}","%%.f %%%%")
     self.MatchLabel.text = string.format(format,lawMatch*100)
     self.MatchLabel:SetBoundsChangedFlag()
     self.MatchLabel:EnsureBoundsCorrect()
@@ -68,19 +68,19 @@ function CharUI:RefreshLaw()
 	
 	--Add law match calculation text to the newly added 5 match labels -JKL51
 	local lawMatch = CS.XiaWorld.NpcPractice.GetFiveBaseEfficiency(PracticeMgr:GetGongDef("Gong_8_Jin"), self.NPCManager.npcs[self.NPCSelector.selectedIndex]) --Edited by JKL51
-    self.MatchLabel_B.text = string.format("Metal: %s %%",string.format("%.0f",lawMatch*100))
+    self.MatchLabel_B.text = string.format("เหล็ก: %s %%",string.format("%.0f",lawMatch*100))
 
 	local lawMatch = CS.XiaWorld.NpcPractice.GetFiveBaseEfficiency(PracticeMgr:GetGongDef("Gong_1_Shui"), self.NPCManager.npcs[self.NPCSelector.selectedIndex]) --Edited by JKL51
-	self.MatchLabel_C.text = string.format("Water: %s %%",string.format("%.0f",lawMatch*100))
+	self.MatchLabel_C.text = string.format("น้ำ: %s %%",string.format("%.0f",lawMatch*100))
 
 	local lawMatch = CS.XiaWorld.NpcPractice.GetFiveBaseEfficiency(PracticeMgr:GetGongDef("Gong_9_Mu"), self.NPCManager.npcs[self.NPCSelector.selectedIndex]) --Edited by JKL51
-	self.MatchLabel_D.text = string.format("Wood: %s %%",string.format("%.0f",lawMatch*100))
+	self.MatchLabel_D.text = string.format("ไม้: %s %%",string.format("%.0f",lawMatch*100))
 
 	local lawMatch = CS.XiaWorld.NpcPractice.GetFiveBaseEfficiency(PracticeMgr:GetGongDef("Gong_10_Huo"), self.NPCManager.npcs[self.NPCSelector.selectedIndex]) --Edited by JKL51
-	self.MatchLabel_E.text = string.format("Fire: %s %%",string.format("%.0f",lawMatch*100))
+	self.MatchLabel_E.text = string.format("ไฟ: %s %%",string.format("%.0f",lawMatch*100))
 	
 	local lawMatch = CS.XiaWorld.NpcPractice.GetFiveBaseEfficiency(PracticeMgr:GetGongDef("Gong_11_Tu"), self.NPCManager.npcs[self.NPCSelector.selectedIndex]) --Edited by JKL51
-	self.MatchLabel_F.text = string.format("Earth: %s %%",string.format("%.0f",lawMatch*100))
+	self.MatchLabel_F.text = string.format("ดิน: %s %%",string.format("%.0f",lawMatch*100))
 	
 	--Add law match calculation text to the newly added 5 match labels --JKL51
 
@@ -150,32 +150,32 @@ function CharUI:MarkUp(UIInfo)
 	self.MatchLabel_B.x = -110 --jkl51
 	self.MatchLabel_B.y = 70 --jkl51
     UIInfo:AddChild(self.MatchLabel_B) --JKL51
-	self.MatchLabel_B.text = "Metal: ---%"
+	self.MatchLabel_B.text = "เหล็ก: ---%"
 
 	
 	self.MatchLabel_C = UIPackage.CreateObjectFromURL("ui://0xrxw6g7gtsug9")
 	self.MatchLabel_C.x = -10 --jkl51
 	self.MatchLabel_C.y = 70 --jkl51
     UIInfo:AddChild(self.MatchLabel_C) --JKL51
-	self.MatchLabel_C.text = "Water: ---%"
+	self.MatchLabel_C.text = "น้ำ: ---%"
 	
 	self.MatchLabel_D = UIPackage.CreateObjectFromURL("ui://0xrxw6g7gtsug9")
 	self.MatchLabel_D.x = 85 --jkl51
 	self.MatchLabel_D.y = 70 --jkl51
     UIInfo:AddChild(self.MatchLabel_D) --JKL51
-	self.MatchLabel_D.text = "Wood: ---%"
+	self.MatchLabel_D.text = "ไม้: ---%"
 	
 	self.MatchLabel_E = UIPackage.CreateObjectFromURL("ui://0xrxw6g7gtsug9")
 	self.MatchLabel_E.x = 190 --jkl51
 	self.MatchLabel_E.y = 70 --jkl51
     UIInfo:AddChild(self.MatchLabel_E) --JKL51
-	self.MatchLabel_E.text = "Fire: ---%"
+	self.MatchLabel_E.text = "ไฟ: ---%"
 	
 	self.MatchLabel_F = UIPackage.CreateObjectFromURL("ui://0xrxw6g7gtsug9")
 	self.MatchLabel_F.x = 270 --jkl51
 	self.MatchLabel_F.y = 70 --jkl51
     UIInfo:AddChild(self.MatchLabel_F) --JKL51
-	self.MatchLabel_F.text = "Earth: ---%"
+	self.MatchLabel_F.text = "ดิน: ---%"
 	
 	--Add more match labels for each of the taiyi laws to be displayed at the top -JKL51
 
@@ -212,3 +212,4 @@ function CharUI:MarkUp(UIInfo)
         end
     )
 end
+
